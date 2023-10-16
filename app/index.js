@@ -1,15 +1,20 @@
 import { View, Text, ScrollView, SafeAreaView } from 'react-native'
-import {Stack,useRouter} from 'expo-router'
+import {Stack} from 'expo-router'
+import Home from '../components/Home/Home'
+import Message from '../components/Message/Message'
+import Profile from '../components/Profile/Profile'
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 
-const Home = () => {
-    const router = useRouter()
+const Main = () => {
+    const Tab = createBottomTabNavigator()
     return (
         <SafeAreaView>
-            <Stack.Screen
-                options={{
-                    headerTitle: ""
-                }}
-            />
+            <Tab.Navigator>
+                <Tab.Screen name="Home" component={Home} />
+                <Tab.Screen name="Message" component={Message} />
+                <Tab.Screen name="Profile" component={Profile} />
+            </Tab.Navigator> 
+            
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View>
                 </View>
@@ -18,4 +23,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Main
