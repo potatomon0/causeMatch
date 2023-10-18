@@ -6,11 +6,14 @@ function SearchBar() {
     const onChangeSearch = query => setSearchQuery(query);
 
     return (
+        <>
         <Searchbar
             placeholder="Search"
             onChangeText={onChangeSearch}
-            value={searchQuery}
+            value={searchQuery} //value of text input, use this to perform search in database
         />
+        
+        </>
     )
 }
 
