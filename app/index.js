@@ -23,6 +23,7 @@ const Main = () => {
                     tabBarIcon: ({ color, size }) => (
                         <AntDesign name="home" size={24} color="black" />
                     ),
+                    
                 }}
             />
             <Tab.Screen name="Message" component={Message} options={{
