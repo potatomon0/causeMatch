@@ -11,7 +11,9 @@ import { AntDesign } from '@expo/vector-icons'
 const Main = () => {
     const Tab = createBottomTabNavigator()
     const styles = StyleSheet.create({
-        safeAreaView: {
+        header: {
+            height:50,
+            width:150,
 
         }
     })
@@ -29,16 +31,13 @@ const Main = () => {
                     tabBarActiveTintColor: '#f8d99b',
                     tabBarInactiveTintColor: 'white',
                     headerTintColor: '#FFFFFF',
-                    // headerBackground: () => {
-                    //     <Image source={{ uri: '../assets/images/causeMatchLogo1.png' }} />
-                    // },
                     headerTitle: () => (
-                        <Image style={{ width: 150, height: 50 }} source={require("../assets/images/causeMatchLogo1.png")} />
+                        <Image style={styles.header} source={require("../assets/images/causeMatchLogo1.png")} />
                     ),
                     headerStyle: {
                         backgroundColor: '#002c6a',
                     },
-                    
+
                 }}
             />
             <Tab.Screen name="Message" component={Message} options={{
@@ -53,7 +52,7 @@ const Main = () => {
                 tabBarInactiveTintColor: 'white',
                 headerTintColor: '#FFFFFF',
                 headerTitle: () => (
-                    <Image style={{ width: 150, height: 50 }} source={require("../assets/images/causeMatchLogo1.png")} />
+                    <Image style={styles.header} source={require("../assets/images/causeMatchLogo1.png")} />
                 ),
                 headerStyle: {
                     backgroundColor: '#002c6a',
@@ -73,7 +72,7 @@ const Main = () => {
                     tabBarInactiveTintColor: 'white',
                     headerTintColor: '#FFFFFF',
                     headerTitle: () => (
-                        <Image style={{ width: 150, height: 50, alignSelf: 'center' }} source={require("../assets/images/causeMatchLogo1.png")} />
+                        <Image style={styles.header} source={require("../assets/images/causeMatchLogo1.png")} />
                     ),
                     headerStyle: {
                         backgroundColor: '#002c6a'

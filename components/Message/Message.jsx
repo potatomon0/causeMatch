@@ -7,7 +7,16 @@ function Message() {
             borderColor: 'black',
             borderWidth: 1,
             flex: 1,
+            paddingTop:20,
         },
+        message:{
+            // flex:1,
+            borderWidth:1,
+            borderColor:"black",
+            height:75,
+            margin:10,
+            textAlign: 'center'
+        }
     })
     const [messageData, setMessageData] = useState(null)
     const getMessages = async () => {
@@ -20,7 +29,14 @@ function Message() {
     // },[])
     return (
         <View style={styles.container}>
-            <Text >Span existing messages</Text>
+            <Text style={styles.message}>Existing message</Text>
+            <Text style={styles.message}>Existing messages</Text>
+            <Text style={styles.message}>Existing messages</Text>
+            <Text style={styles.message}>Existing messages</Text>
+            <Text style={styles.message}>Existing messages</Text>
+            <Text style={styles.message}>Existing messages</Text>
+            <Text style={styles.message}>Existing messages</Text>
+            
         </View>
     )
 

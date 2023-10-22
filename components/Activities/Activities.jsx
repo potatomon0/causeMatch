@@ -7,8 +7,15 @@ function Activities() {
         container: {
             borderColor: 'black',
             borderWidth: 1,
-            flex: 1
+            flex: 1,
+            margin:10,
         },
+        activity: {
+            borderWidth:1,
+            borderColor:'black',
+            height:100,
+            margin:10,textAlign: 'center'
+        }
     })
     const [activityData, setActivityData] = useState(null)
     const getActivities = async () => {
@@ -21,7 +28,11 @@ function Activities() {
     // },[])
     return (
         <View style={styles.container}>
-            <Text >Activities feed go here</Text>
+            <Text style={styles.activity}>Activity feed from backend</Text>
+            <Text style={styles.activity}>Activity feed from backend</Text>
+            <Text style={styles.activity}>Activity feed from backend</Text>
+            <Text style={styles.activity}>Activity feed from backend</Text>
+            <Text style={styles.activity}>Activity feed from backend</Text>
         </View>
     )
 }
