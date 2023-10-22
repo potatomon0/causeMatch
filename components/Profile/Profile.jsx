@@ -1,8 +1,11 @@
-import { Text } from 'react-native'
+import { Text, Image } from 'react-native'
 
 function Profile() {
     return (
-        <Text>Profile</Text>
+        <>
+            <Image source={require('../../assets/images/female_profile_img.jpg')}  style = {{ width: 200, height: 200 }}/>
+        
+        </>
     )
 }
 
