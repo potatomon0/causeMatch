@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, SafeAreaView, StyleSheet } from 'react-native'
+import { View, Text, ScrollView, SafeAreaView, StyleSheet, Image } from 'react-native'
 import React from 'react';
 import { Stack } from 'expo-router'
 import { NavigationContainer } from '@react-navigation/native';
@@ -21,25 +21,64 @@ const Main = () => {
                 options={{
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
-                        <AntDesign name="home" size={24} color="black" />
+                        <AntDesign name="home" size={24} color="white" />
                     ),
+                    tabBarStyle: {
+                        backgroundColor: '#002c6a',
+                    },
+                    tabBarActiveTintColor: '#f8d99b',
+                    tabBarInactiveTintColor: 'white',
+                    headerTintColor: '#FFFFFF',
+                    // headerBackground: () => {
+                    //     <Image source={{ uri: '../assets/images/causeMatchLogo1.png' }} />
+                    // },
+                    headerTitle: () => (
+                        <Image style={{ width: 150, height: 50 }} source={require("../assets/images/causeMatchLogo1.png")} />
+                    ),
+                    headerStyle: {
+                        backgroundColor: '#002c6a',
+                    },
                     
                 }}
             />
             <Tab.Screen name="Message" component={Message} options={{
                 tabBarLabel: 'Message',
                 tabBarIcon: ({ color, size }) => (
-                    <AntDesign name="message1" size={24} color="black" />
+                    <AntDesign name="message1" size={24} color="white" />
                 ),
+                tabBarStyle: {
+                    backgroundColor: '#002c6a',
+                },
+                tabBarActiveTintColor: '#f8d99b',
+                tabBarInactiveTintColor: 'white',
+                headerTintColor: '#FFFFFF',
+                headerTitle: () => (
+                    <Image style={{ width: 150, height: 50 }} source={require("../assets/images/causeMatchLogo1.png")} />
+                ),
+                headerStyle: {
+                    backgroundColor: '#002c6a',
+                }
             }}
             />
-            <Tab.Screen name="Profile" component={Profile} 
-            options={{
-                tabBarLabel: 'Profile',
-                tabBarIcon: ({ color, size }) => (
-                    <AntDesign name="profile" size={24} color="black" />
-                ),
-            }}
+            <Tab.Screen name="Profile" component={Profile}
+                options={{
+                    tabBarLabel: 'Profile',
+                    tabBarIcon: ({ color, size }) => (
+                        <AntDesign name="profile" size={24} color="white" />
+                    ),
+                    tabBarStyle: {
+                        backgroundColor: '#002c6a',
+                    },
+                    tabBarActiveTintColor: '#f8d99b',
+                    tabBarInactiveTintColor: 'white',
+                    headerTintColor: '#FFFFFF',
+                    headerTitle: () => (
+                        <Image style={{ width: 150, height: 50, alignSelf: 'center' }} source={require("../assets/images/causeMatchLogo1.png")} />
+                    ),
+                    headerStyle: {
+                        backgroundColor: '#002c6a'
+                    }
+                }}
             />
         </Tab.Navigator>
     )

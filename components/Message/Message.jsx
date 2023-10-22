@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import { Text } from 'react-native'
+import { useEffect, useState } from 'react';
+import { Text, StyleSheet, View } from 'react-native'
 
 function Message() {
     const styles = StyleSheet.create({
         container: {
             borderColor: 'black',
             borderWidth: 1,
-            flex: 1
+            flex: 1,
         },
     })
     const [messageData, setMessageData] = useState(null)
@@ -15,9 +15,12 @@ function Message() {
             setMessageData(data)
         })
     }
+    // useEffect(()=>{
+    //     getMessages()
+    // },[])
     return (
         <View style={styles.container}>
-            <Text >Activities feed go here</Text>
+            <Text >Span existing messages</Text>
         </View>
     )
 

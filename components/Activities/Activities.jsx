@@ -3,6 +3,13 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 function Activities() {
+    const styles = StyleSheet.create({
+        container: {
+            borderColor: 'black',
+            borderWidth: 1,
+            flex: 1
+        },
+    })
     const [activityData, setActivityData] = useState(null)
     const getActivities = async () => {
         const res = await axios.get('backendURL goes here').then((data) => {
@@ -11,7 +18,7 @@ function Activities() {
     }
     // useEffect(() => {
     //     getActivities()
-    // })
+    // },[])
     return (
         <View style={styles.container}>
             <Text >Activities feed go here</Text>
